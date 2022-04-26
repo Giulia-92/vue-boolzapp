@@ -1,15 +1,124 @@
 header{
     background-color: rgb(31, 138, 115);
-    height: 30px;
+    height: 110px;  
 }
+
 main{
-background-color: rgb(197, 190, 190);
+background-color: rgb(226, 214, 214);
+height: 100vh;
+
+}
+aside{
+
+    width:500px;
+   
 }
 
+.fa-solid{
+    font-size:5px;
+    color:rgb(245, 245, 245);
+    margin-bottom:-35px;
+}
+.img{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    margin-top:5px;
+}
+.set{
+    display: flex;
+    justify-content:flex-end;
+    color: rgb(173, 169, 169);
+}
+.fa-solid {
+    color: white;
+   margin-right:15px;
+   font-size: 25px;
+   margin-top: -38px;
+}
+h4{
+    font-size: 30px;
+    font-family:'Varela Round', sans-serif;
+    padding-left:15%;
+    margin-top:-7%;
+    
+}
+.profilo{
+   border: 1px solid rgb(173, 169, 169);
+    height: 50px;
+    background-color: rgb(192, 192, 192);
+    
+}
+.chat{
+    border: 1px solid rgb(173, 169, 169);
+    height: 50px;
+    background-color:rgb(192, 192, 192);
+    display: flex;
+    justify-content:flex-end;
+    padding-top:50px;
+   
 
+}
+.message{
+    width: 100%;
+    background-image: url(./img/mine.jpg);
+}
+.notifiche{
+   padding-top:6px ;
+    height: 60px;
+    background-color: rgb(0, 132, 255);
+    border-radius:10px;
+}
+button{
+    height:100%;
+    border-radius:50%;
+    padding-top:6px;
+    border:white ;
+    background-color: rgb(192, 192, 192);
+}
+.fa-solid{
+    padding-left:8px;
+   
+}
 
+.contact{
+    background-color: darkgrey;
+}
 
 
 #container{
-border: 1px solid black;
+border: 1px solid rgb(173, 169, 169);
+height: 800px;
+display: flex;
+align-content: center;
+margin-left:180px;
+margin-right:200px;
+margin-top: -90px;
+overflow-y: auto;
+width:calc(100%) - 400 px;
+
+}
+.v{
+    background-color:rgb(47, 194, 162);
+    margin-right: 8px; 
+   
+    
+}
+.form-control{
+    width: 90%;
+}
+.fa-solid{
+  color: rgb(244, 244, 255); 
+  font-size: 25px;
+  margin-right:10px;
+    
+   
+}
+.invio{
+    display: flex;
+    border: 1px solid rgb(173, 169, 169); 
+    height:50px;
+    margin-top:69%;
+    background-color:rgb(211, 202, 202);
+    align-items:center  
 }
