@@ -64,10 +64,11 @@ h4{
     background-image: url(./img/mine.jpg);
 }
 .notifiche{
-   padding-top:6px ;
     height: 60px;
     background-color: rgb(0, 132, 255);
     border-radius:10px;
+    padding-top:20px;
+    font-size:20px;
 }
 button{
     height:100%;
@@ -78,6 +79,7 @@ button{
 }
 .fa-solid{
     padding-left:8px;
+    
    
 }
 
