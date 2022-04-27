@@ -55,7 +55,6 @@ color: white;
 }
 
 .profilo{
-    height:55px;
     background-color:#dee2e6;
     
 }
@@ -69,34 +68,36 @@ color: white;
 .sent{
     border: 1px solid rgb(175, 173, 173);
     background-color:rgb(200, 200, 200);
-    height:60px;
+    height:65px;
     border-radius: 10px;
     margin-left:10px;
     margin-top:10px;
     padding-left:15px;
     padding-right:14px;
     padding-top: 8px;
-    font-size:20px;
+    font-size:18px;
     width:30%;
     font-family:'Varela Round', sans-serif;
     display: flex;
-    justify-content: flex-end;
+    float:right;
+    clear: both;
     
 }
 .received{
     background-color:rgb(67, 176, 67);
-    height:60px;
+    height:65px;
     border-radius: 10px;
     margin-left:10px;
     margin-top:10px;
     padding-left:15px;
     padding-top: 8px;
-    font-size:20px;
+    font-size:18px;
     width:30%;
     font-family:'Varela Round', sans-serif;
     display: flex;
     border: 1px solid rgb(26, 111, 26);
-    flex-direction: column;
+    float: left;
+    clear: both;
 }
 .script-mess{
 
@@ -165,7 +166,7 @@ width:calc(100%) - 400 px;
     display: flex;
     border: 1px solid rgb(173, 169, 169); 
     height:50px;
-    margin-top:48%;
+    margin-top:69%;
     background-color:#dee2e6;
     align-items:center  
 }

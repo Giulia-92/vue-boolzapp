@@ -169,13 +169,39 @@ const app = new Vue({
         ],
 
                 acIndex: 0,
-                searchtext:'',
+                searchText:'',
                 message: ''
             },
             methods: {
                 viewChat(index){
                     this.acIndex = index;
-                }
+                },
+                sendMessage(){
+                    const nuovoMess ={
+                        date: '10/01/2020 15:51:00',
+                        message:this.message,
+                        status: 'sent'
+                    };
+                    const rispMess ={
+                    date: '10/01/2020 15:51:00',
+                    message: 'OK!!',
+                    status: 'received'
+                    };
+
+                    this.contacts[this.acIndex].message.push(nuovoMess);
+                    this.message='';
+                    setTimeout(()=>{
+                        this.contacts[this.acIndex].message.push(rispMess);
+                    },3000)
+                    
+                },
+                /*filterContact({
+                    this.contacts.forEach((contact)
+                    if(contact.name.toLowerCase)
+                    searchText.toLowerCase())){
+                        contact.visible = true;
+                    } else{contact.visible = false;
+                })*/
 
             }
         

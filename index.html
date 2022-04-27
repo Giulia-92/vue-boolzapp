@@ -20,42 +20,45 @@
     <main>
         <div id="app">
 <div id="container">
-   <section class="contact">
-    <aside>
-        <div class="profilo">
-            <img  class="img" src="./img/avatar_6.jpg" alt="avatar">
-            <h4>Giulia</h4>
-            <div class="set">
-                <i class="fa-solid fa-message"></i>
-                <i class="fa-solid fa-ellipsis-vertical"></i>
-                <i class="fa-solid fa-circle-notch"></i>
-            </div>
+    <section class="contact">
+        <aside>
+            <div class="profilo">
+                <img class="img" src="./img/avatar_6.jpg" alt="avatar">
+                <h4>Giulia</h4>
+                <div class="set">
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                    <i class="fa-solid fa-circle-notch"></i>
+                </div>
 
                 <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping"><button class="btn"> <i class="fa-solid fa-magnifying-glass"></i></button></span>
                     <input type="text" class="form-control" placeholder="cerca o inzia una nuova chat" v-model="searchText">
                 </div>
-            <div class="notifiche">
-                <i class="fa-solid fa-bell-slash"></i>
-                <h6>Ricevi notifiche di nuovi messaggi
-                <a href="#">Attiva notifiche desktop</a>
-            </h6>
+                <div class="notifiche">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <h6>Ricevi notifiche di nuovi messaggi
+                        <a href="#">Attiva notifiche desktop</a>
+                    </h6>
+                </div>
             </div>
-        </div>
-        <section>
-            <div class="contacts">
-                <ul class="list-group">
-                    <li v-for="(contact,index) in contacts" :key="index"
-                    class="list-group-item"
-                    :class="{'active':acIndex === index}" @click="">
-                    <img class="img"  :src="'./img/avatar' + contact.avatar +'.jpg'" :alt="'avatar' + contact.name">
-                    <span>{{contact.name}}</span>
-                    <span>{{contact.message}}</span>
-                    </li>
-                </ul>
-            </div>
-         </aside>
-        </section>
+            <section>
+                <div class="contacts">
+                    <ul class="list-group">
+                        <li v-for="(contact,index) in contacts" :key="index"
+                        class="list-group-item"
+                        :class="{'active':acIndex === index}" @click=" viewChat(index)">
+                
+                        <img class="img"  :src="'./img/avatar' + contact.avatar +'.jpg'" :alt="'avatar' + contact.name">
+                        <span>{{contact.name}}</span>
+                        <span>{{contact.message}}</span>
+                        </li>
+                    </ul>
+                </div>
+                
+            </section>
+        </aside>
+    </section>
 <section class="message">
     <div class="chat">
         <i class="fa-solid fa-magnifying-glass"></i>
@@ -67,8 +70,8 @@
     </div>
     <div class="invio">
         <i class="fa-solid fa-face-smile"></i>
-        <input class="form-control form-control-lg" type="text" placeholder="scrivi messaggio" aria-label="text">
-        <button class="v"><i class="fa-solid fa-check"></i></button>
+        <input class="form-control form-control-lg" type="text" v-model="message" @keyup.enter="sendMessage()" placeholder="scrivi messaggio" aria-label="text">
+        <button class="v" @click="" ><i class="fa-solid fa-check"></i></button>
         <i class="fa-solid fa-microphone"></i>
         </div>
     
