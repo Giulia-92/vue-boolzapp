@@ -167,9 +167,9 @@ const app = new Vue({
                 ],
             },
         ],
-        
+
                 acIndex: 0,
-                
+                searchtext:'',
                 message: ''
             },
             methods: {
