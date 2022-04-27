@@ -1,6 +1,7 @@
 header{
     background-color: rgb(31, 138, 115);
-    height: 110px;  
+    height:100px;  
+    position: relative;
 }
 
 main{
@@ -43,16 +44,24 @@ h4{
     margin-top:-7%;
     
 }
+h6{
+    font-family:'Varela Round', sans-serif;
+    font-size:15px;
+    margin-left: 50px;
+    margin-top: -25px;
+}
+a{
+color: white;
+}
+
 .profilo{
-   border: 1px solid rgb(173, 169, 169);
-    height: 50px;
-    background-color: rgb(192, 192, 192);
+    height:55px;
+    background-color:#dee2e6;
     
 }
 .chat{
-    border: 1px solid rgb(173, 169, 169);
     height: 50px;
-    background-color:rgb(192, 192, 192);
+    background-color:#dee2e6;
     display: flex;
     justify-content:flex-end;
     padding-top:50px;
@@ -75,27 +84,29 @@ button{
     border-radius:50%;
     padding-top:6px;
     border:white ;
-    background-color: rgb(192, 192, 192);
+    background-color: rgb(78, 77, 77);
 }
 .fa-solid{
-    padding-left:8px;
-    
-   
+    padding-left:8px; 
+}
+.list-group{
+    background-color:rgb(78, 77, 77);
+    height:8px;
+    display: flex;
+    align-content: stretch;
 }
 
 .contact{
-    background-color: darkgrey;
+    background-color: rgb(218, 209, 209);
 }
 
 
 #container{
 border: 1px solid rgb(173, 169, 169);
 height: 800px;
-display: flex;
-align-content: center;
+display:flex;
 margin-left:180px;
 margin-right:200px;
-margin-top: -90px;
 overflow-y: auto;
 width:calc(100%) - 400 px;
 
@@ -110,7 +121,7 @@ width:calc(100%) - 400 px;
     width: 90%;
 }
 .fa-solid{
-  color: rgb(244, 244, 255); 
+  color: rgb(182, 182, 184); 
   font-size: 25px;
   margin-right:10px;
     
@@ -121,6 +132,6 @@ width:calc(100%) - 400 px;
     border: 1px solid rgb(173, 169, 169); 
     height:50px;
     margin-top:69%;
-    background-color:rgb(211, 202, 202);
+    background-color:#dee2e6;
     align-items:center  
 }

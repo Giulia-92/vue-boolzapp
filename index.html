@@ -14,11 +14,11 @@
     <title>Boolzapp</title>
 </head>
 <header>
-    fggvbjhhjhj
+   
 </header>
 <body>
     <main>
-       fgbhjkmnfvgbhjnjmkà,pàklòsdxefgvbjhnml.ò
+        <div id="app">
 <div id="container">
    <section class="contact">
     <aside>
@@ -37,12 +37,23 @@
                 </div>
             <div class="notifiche">
                 <i class="fa-solid fa-bell-slash"></i>
+                <h6>Ricevi notifiche di nuovi messaggi
+                <a href="#">Attiva notifiche desktop</a>
+            </h6>
             </div>
         </div>
-        <div class="row">
-            <div class="col-6 ">.col-6 .</div>
-            
-        </div>   
+        <div class="contacts">
+       <ul class="list-group">
+          <li v-for="(contact,index) in contacts" :key="index"
+          class="list-group-item"
+          :class="{'active':acIndex === index}" @click="">
+          <img :src="'./img/avatar' + contact.avatar +'.jpg'" :alt="'avatar' + contact.name">
+        <span>{{contact.name}}</span>
+        <!--<span>{{contact.avatar}}</span>
+        <span>{{contact.message}}</span>-->
+          </li>
+       </ul>
+    </div>
     </aside>
 </section> 
 <section class="message">
@@ -74,8 +85,9 @@
 
 
 
-
+</div>
 </main>
+
     <script src="script.js"></script>
 </body>
 </html>
