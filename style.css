@@ -10,7 +10,6 @@ height: 100vh;
 
 }
 aside{
-
     width:500px;
    
 }
@@ -99,9 +98,7 @@ color: white;
     float: left;
     clear: both;
 }
-.script-mess{
 
-}
 .message{
     width: 100%;
     background-image: url(./img/mine.jpg);
@@ -126,13 +123,13 @@ button{
 }
 .list-group{
     background-color:rgb(78, 77, 77);
-    height:8px;
+    height:18px;
     display: flex;
     align-content: stretch;
 }
 
 .contact{
-    background-color: rgb(218, 209, 209);
+    background-color:#f8f9fa;
 }
 
 

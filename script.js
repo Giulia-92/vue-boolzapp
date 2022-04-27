@@ -188,14 +188,14 @@ const app = new Vue({
                     status: 'received'
                     };
 
-                    this.contacts[this.acIndex].message.push(nuovoMess);
+                    this.contacts[this.acIndex].messages.push(nuovoMess);
                     this.message='';
                     setTimeout(()=>{
-                        this.contacts[this.acIndex].message.push(rispMess);
+                        this.contacts[this.acIndex].messages.push(rispMess);
                     },3000)
                     
                 },
-                /*filterContact({
+                /*filterContact(){
                     this.contacts.forEach((contact)
                     if(contact.name.toLowerCase)
                     searchText.toLowerCase())){
