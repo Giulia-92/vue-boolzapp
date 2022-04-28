@@ -33,7 +33,7 @@
 
                 <div class="input-group flex-nowrap">
                     <span class="input-group-text" id="addon-wrapping"><button class="btn"> <i class="fa-solid fa-magnifying-glass"></i></button></span>
-                    <input type="text" class="form-control" placeholder="cerca o inzia una nuova chat" v-model="searchText">
+                    <input type="text" class="form-control" placeholder="cerca o inzia una nuova chat" v-model="searchText" @click="filterChat">
                 </div>
                 <div class="notifiche">
                     <i class="fa-solid fa-bell-slash"></i>
@@ -48,11 +48,12 @@
                         <li v-for="(contact,index) in contacts" :key="index"
                         class="list-group-item"
                         :class="{'active':acIndex === index}" @click=" viewChat(index)">
-                
+                        <div v-if="contact.visible">
                         <img class="img"  :src="'./img/avatar' + contact.avatar +'.jpg'" :alt="'avatar' + contact.name">
                         <span>{{contact.name}}</span>
                         <span>{{contact.message}}</span>
-                        
+                        <!---<span>{{contact.messages[contact.messages.length-1].date}}</span>-->
+                    </div>
                         </li>
                     </ul>
                 </div>
@@ -62,9 +63,11 @@
     </section>
 <section class="message">
     <div class="chat">
+        <span class="chat-active">{{contacts[acIndex].name}}</span>
         <i class="fa-solid fa-magnifying-glass"></i>
         <i class="fa-solid fa-paperclip"></i>
         <i class="fa-solid fa-ellipsis-vertical"></i>
+       
     </div>
     <div class="script-mess" v-for="(item,index) in contacts[acIndex].messages" :key="index" :class="item.status === 'sent' ? 'sent' :'received'">
         <span>{{item.message}}</span>
@@ -72,7 +75,7 @@
     <div class="invio">
         <i class="fa-solid fa-face-smile"></i>
         <input class="form-control form-control-lg" type="text" v-model="message" @keyup.enter="sendMessage()" placeholder="scrivi messaggio" aria-label="text">
-        <button class="v" @click="" ><i class="fa-solid fa-check"></i></button>
+        <button class="v" @click="sendMessage" ><i class="fa-solid fa-check"></i></button>
         <i class="fa-solid fa-microphone"></i>
         </div>
     

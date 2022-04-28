@@ -171,7 +171,7 @@ const app = new Vue({
                 acIndex: 0,
                 searchText:'',
                 message: ''
-            },
+        },
             methods: {
                 viewChat(index){
                     this.acIndex = index;
@@ -195,16 +195,19 @@ const app = new Vue({
                     },3000)
                     
                 },
-                /*filterContact(){
-                    this.contacts.forEach((contact)
-                    if(contact.name.toLowerCase)
-                    searchText.toLowerCase())){
-                        contact.visible = true;
-                    } else{contact.visible = false;
-                })*/
+               filterContact(){
+                    
+                    this.contacts.forEach((contact)=>{
+                        if(contact.name.toLowerCase().includes(this.searchText.toLowerCase())){
+                            contact.visible = true;
+                        } else{contact.visible = false;
+                        }
+                    });
 
-            }
+
+
+                },
         
-    })
-
-
+            },
+        })
+            
